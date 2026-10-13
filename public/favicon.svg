@@ -1,61 +1,66 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <defs>
-    <!-- Background Gradient -->
-    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#0c1929" />
-      <stop offset="100%" stop-color="#06070a" />
-    </radialGradient>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Perch / Branch -->
+  <rect x="110" y="174" width="72" height="15" rx="2" fill="#B76E3A" />
 
-    <!-- Neon Orbital Gradients -->
-    <linearGradient id="orbitCyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#38bdf8" />
-      <stop offset="50%" stop-color="#06b6d4" />
-      <stop offset="100%" stop-color="#22d3ee" />
-    </linearGradient>
+  <!-- Tail Feathers -->
+  <path d="M 44 212 L 44 256 L 74 256 L 78 240 L 88 244 L 88 206 Z" fill="#3B82F6" />
+  <path d="M 74 216 L 74 256 L 78 240 L 88 244 L 88 206 Z" fill="#60A5FA" opacity="0.6" />
+  <path d="M 86 210 L 86 244 L 110 216 L 110 196 Z" fill="#2563EB" />
 
-    <linearGradient id="orbitEmerald" x1="100%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#10b981" />
-      <stop offset="50%" stop-color="#06b6d4" />
-      <stop offset="100%" stop-color="#3b82f6" />
-    </linearGradient>
+  <!-- Main Body / Head (Light Blue) -->
+  <path d="M 44 80 
+           C 44 35, 78 0, 148 0 
+           L 148 108 
+           L 148 186 
+           L 110 196 
+           L 88 206 
+           L 44 212 
+           Z" fill="#3B82F6" />
 
-    <linearGradient id="coreGlow" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff" />
-      <stop offset="40%" stop-color="#22d3ee" />
-      <stop offset="100%" stop-color="#0284c7" />
-    </linearGradient>
+  <!-- Back of Head Rounding -->
+  <path d="M 44 80 
+           C 44 35, 78 0, 148 0 
+           L 148 60 
+           L 44 60 
+           Z" fill="#3B82F6" />
 
-    <!-- Subtle Drop Shadow Filter -->
-    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="1.5" result="blur" />
-      <feComposite in="SourceGraphic" in2="blur" operator="over" />
-    </filter>
-  </defs>
+  <!-- Yellow Upper Beak -->
+  <path d="M 148 0 
+           C 188 0, 226 24, 226 80 
+           L 148 92 
+           Z" fill="#FBBF24" />
 
-  <!-- Dark Rounded App Container -->
-  <rect width="64" height="64" rx="16" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="1.5" />
+  <!-- Dark Navy Lower Beak Tip / Contrast -->
+  <path d="M 184 92 
+           C 184 58, 226 48, 226 80 
+           L 184 92 
+           Z" fill="#1E293B" />
+  <path d="M 226 46 
+           C 230 65, 230 80, 184 92 
+           C 214 92, 230 80, 230 46 
+           Z" fill="#1E293B" />
 
-  <!-- Quantum Lattice Coordinate Grid Lines -->
-  <circle cx="32" cy="32" r="24" fill="none" stroke="#0ea5e9" stroke-width="0.75" stroke-dasharray="2 3" opacity="0.35" />
-  <circle cx="32" cy="32" r="17" fill="none" stroke="#22d3ee" stroke-width="0.75" opacity="0.25" />
+  <!-- Eye White Patch -->
+  <path d="M 88 15 
+           L 134 15 
+           L 134 72 
+           C 134 84, 118 88, 102 84 
+           C 92 81, 88 72, 88 60 
+           Z" fill="#FFFFFF" />
 
-  <!-- Abstract Intersecting Superposition Orbital Ellipses -->
-  <!-- Orbital 1 (35 deg tilt) -->
-  <ellipse cx="32" cy="32" rx="22" ry="7.5" fill="none" stroke="url(#orbitCyan)" stroke-width="2.2" transform="rotate(35 32 32)" filter="url(#neonBlur)" opacity="0.95" />
+  <!-- Square Pupil -->
+  <rect x="106" y="36" width="16" height="16" rx="2" fill="#1E293B" />
 
-  <!-- Orbital 2 (-35 deg tilt) -->
-  <ellipse cx="32" cy="32" rx="22" ry="7.5" fill="none" stroke="url(#orbitEmerald)" stroke-width="2.2" transform="rotate(-35 32 32)" filter="url(#neonBlur)" opacity="0.95" />
+  <!-- Dark Blue Wing -->
+  <path d="M 44 110 
+           C 72 108, 148 108, 148 114 
+           C 148 160, 108 204, 56 210 
+           C 34 204, 26 150, 44 110 
+           Z" fill="#1E3A8A" />
 
-  <!-- Kinetic Vector Arc (representing Badminton smash trajectory & quantum phase gate) -->
-  <path d="M 14 42 Q 32 10 50 22" fill="none" stroke="#67e8f9" stroke-width="1.8" stroke-linecap="round" opacity="0.75" />
-
-  <!-- Peripheral Orbital Quantum Nodes -->
-  <circle cx="47" cy="23" r="2.2" fill="#38bdf8" />
-  <circle cx="17" cy="41" r="2.2" fill="#34d399" />
-  <circle cx="45" cy="43" r="1.6" fill="#06b6d4" opacity="0.8" />
-  <circle cx="19" cy="21" r="1.6" fill="#a5f3fc" opacity="0.8" />
-
-  <!-- High-Energy Dirac Quantum Core Nucleus -->
-  <circle cx="32" cy="32" r="5.5" fill="url(#coreGlow)" filter="url(#neonBlur)" />
-  <circle cx="32" cy="32" r="2.5" fill="#ffffff" />
+  <path d="M 44 110 
+           C 60 108, 108 108, 114 114 
+           C 114 160, 90 196, 56 210 
+           C 38 200, 32 150, 44 110 
+           Z" fill="#1E3A8A" />
 </svg>
