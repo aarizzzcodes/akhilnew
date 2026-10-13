@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      if (window.location.search && (window.location.search.includes('~and~') || window.location.search.includes('?/'))) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.hash);
+      }
+    </script>
     <title>Akhil Pesala — B.Tech CS & Quantum Computing Research Profile</title>
     <meta name="description" content="Academic portfolio, quantum algorithms research, project documentation, and physics computing exhibits by Akhil Pesala, B.Tech First Year Computer Science student." />
     <meta property="og:title" content="Akhil Pesala — B.Tech CS & Quantum Computing Research Profile" />
