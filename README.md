@@ -93,6 +93,24 @@ Built with React 19, TypeScript, Tailwind CSS v4, Motion, and HTML5 Canvas.
 
 ---
 
+## 🌐 Deploying to GitHub Pages (Automatic Workflow)
+
+This project is pre-configured with a GitHub Actions automated deployment workflow (`.github/workflows/deploy.yml`) and relative asset paths (`base: './'` in `vite.config.ts`), preventing blank white screen errors caused by subpath routing.
+
+### To enable on GitHub:
+1. Push your code to your repository:
+   ```bash
+   git add .
+   git commit -m "Configure Vite relative base and GitHub Pages workflow"
+   git push origin main
+   ```
+2. In your GitHub repository:
+   - Go to **Settings** → **Pages** (under "Code and automation" in the left sidebar).
+   - Under **Build and deployment** → **Source**, select **"GitHub Actions"** from the dropdown.
+3. Every time you push to `main`, GitHub Actions will automatically build and publish your site at `https://<your-username>.github.io/<repo-name>/`.
+
+---
+
 ## 📁 Project Structure
 
 ```
